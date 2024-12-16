@@ -1,0 +1,67 @@
+.contacts {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .info {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .info h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .info p {
+    margin: 5px 0;
+    text-align: center;
+  }
+  
+  .info a {
+    color: #1892f5;
+    text-decoration: none;
+  }
+  
+  .info a:hover {
+    text-decoration: underline;
+  }
+  
+  .map {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .contacts {
+      padding: 10px;
+    }
+  
+    .info {
+      font-size: 0.9rem;
+    }
+  
+    .info h2 {
+      font-size: 1.3rem;
+    }
+  
+    .map {
+      height: 300px; /* Уменьшаем высоту карты на мобильных устройствах */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .info {
+      font-size: 0.8rem;
+    }
+  
+    .map {
+      height: 250px; /* Еще больше уменьшаем высоту карты для компактных экранов */
+    }
+  }
+  

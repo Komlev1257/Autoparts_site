@@ -1,0 +1,16 @@
+.catalog {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .catalog h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .search_result {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  

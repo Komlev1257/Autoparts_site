@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^2.10.1",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@pbe/react-yandex-maps": "^1.2.5",
     "f": "^1.4.0",
     "framer-motion": "^11.11.4",
     "imask": "^7.6.1",

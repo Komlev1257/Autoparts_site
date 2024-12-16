@@ -1,15 +1,28 @@
 html, body {
-    margin: 0;
-    padding: 0;
-  height: 100vh;
-  width: 100vw;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
   font-family: 'Arial', sans-serif;
 }
+
 #root {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
-::-webkit-scrollbar {
-  width: 0;
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Минимальная высота равна 100% экрана */
+}
+
+.app-content {
+  flex: 1; /* Основной контент растягивается, занимая доступное пространство */
+}
+
+footer {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
 }

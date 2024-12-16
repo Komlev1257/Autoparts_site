@@ -1,38 +1,47 @@
-import React, { useState } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import styles from './home.module.css';
+import brake from "../assets/brake.png";
+import battery from "../assets/battery.png";
+import chem from "../assets/chem.png";
+import lamp from "../assets/lamp.png";
+import oil from "../assets/oil.png";
+import wheels from "../assets/wheels.png";
+
+const categories = [
+  { id: 1, name: "Моторные масла", image: oil },
+  { id: 2, name: "Тормозные жидкости", image: brake },
+  { id: 3, name: "Аккумуляторы", image: battery },
+  { id: 4, name: "Автохимия", image: chem },
+  { id: 5, name: "Шины и диски", image: wheels },
+  { id: 6, name: "Лампы", image: lamp },
+];
 
 const Home: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value);
+  const handleCategoryClick = (category: string) => {
+    // Перенаправляем на страницу каталога с фильтром по категории
+    navigate(`/catalog?category=${category}`);
   };
 
   return (
-    <div style={{ padding: "20px" }}>
-      {/* Каталог */}
-      <div>
-        <h2>Каталог</h2>
-        <ul style={{ listStyle: "none", padding: 0 }}>
-          {[
-            "Двигатели",
-            "Трансмиссии",
-            "Кузовные элементы",
-            "Электрооборудование",
-          ].map((category, index) => (
-            <li
-              key={index}
-              style={{
-                padding: "10px",
-                border: "1px solid #ddd",
-                borderRadius: "4px",
-                marginBottom: "10px",
-                backgroundColor: "#f9f9f9",
-              }}
-            >
-              {category}
-            </li>
-          ))}
-        </ul>
+    <div className={styles.home}>
+      <div className={styles.categories}>
+        {categories.map((category) => (
+          <div
+            key={category.id}
+            className={styles.category}
+            onClick={() => handleCategoryClick(category.name)} // Обработчик клика
+          >
+            <img
+              src={category.image}
+              alt={category.name}
+              className={styles.category_image}
+            />
+            <div className={styles.category_name}>{category.name}</div>
+          </div>
+        ))}
       </div>
     </div>
   );
