@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Левая часть (например, Главная) */
+.header__left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Центр (строка поиска) */
+.header__center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+/* Правая часть (например, Корзина) */
+.header__right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__cart_logo {
+  width: 40px; /* Устанавливаем фиксированную ширину */
+  height: auto; /* Пропорциональное изменение высоты */
+  max-width: 100%; /* Логотип не может превышать ширину контейнера */
+  object-fit: contain; /* Обеспечиваем сохранение пропорций */
+  margin-right: 5px;
+  transition: filter 0.3s ease; /* Плавное изменение эффекта */
+}
+/* Кнопки в левом и правом блоках */
+.header__cart_button {
+  display: flex;
+  align-items: center; /* Центрирует элементы по вертикали */
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header__button_main {
+  display: flex;
+  align-items: center; /* Центрирует элементы по вертикали */
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header__logo {
+  width: 60px; /* Устанавливаем фиксированную ширину */
+  height: auto; /* Пропорциональное изменение высоты */
+  max-width: 100%; /* Логотип не может превышать ширину контейнера */
+  object-fit: contain; /* Обеспечиваем сохранение пропорций */
+  margin-right: 5px;
+}
+
+.header__logo_text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1; /* Для точного вертикального центрирования */
+  font-family: 'Roboto', sans-serif; /* Укажите желаемый шрифт */
+}
+
+
+/* Строка поиска */
+.header__search_input {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 15px 0 0 15px;
+  box-sizing: border-box;
+}
+
+.header__search_button {
+  padding: 0 15px;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0 15px 15px 0; /* Закругление только для правой стороны */
+  cursor: pointer;
+  height: 50px;
+}
+
+.header__search_button:hover {
+  background-color: #0056b3;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .header__left,
+  .header__right {
+    flex: 1 1 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .header__center {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+  }
+
+  .header__search_input {
+    max-width: 100%;
+  }
+}

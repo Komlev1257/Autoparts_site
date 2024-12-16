@@ -1,0 +1,59 @@
+.footer {
+  background-color: #f4f4f4;
+  color: black;
+  padding: 40px 20px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between; /* Размещение по краям */
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Для адаптивности */
+}
+
+.footer__info {
+  width: 30%; /* Занимает 30% пространства */
+  text-align: center; /* Центрируем текст */
+  margin-bottom: 20px; /* Отступ снизу для адаптивности */
+}
+
+.footer__contact, .footer__social {
+  width: 20%; /* Контакты и соцсети занимают 20% */
+}
+
+.footer__info h3, .footer__contact h3, .footer__social h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.footer__info p, .footer__contact ul, .footer__social ul {
+  font-size: 0.9rem;
+}
+
+.footer__contact ul, .footer__social ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer__contact li, .footer__social li {
+  margin-bottom: 8px;
+}
+
+.footer__social a {
+  color: #1892f5;
+  text-decoration: none;
+}
+
+.footer__social a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer__info, .footer__contact, .footer__social {
+    width: 100%; /* На мобильных устройствах элементы будут занимать всю ширину */
+    text-align: center; /* Центрируем текст */
+    margin-bottom: 20px; /* Отступы между секциями */
+  }
+}
