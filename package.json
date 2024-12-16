@@ -16,6 +16,7 @@
     "@pbe/react-yandex-maps": "^1.2.5",
     "f": "^1.4.0",
     "framer-motion": "^11.11.4",
+    "gh-pages": "^6.2.0",
     "imask": "^7.6.1",
     "js-cookie": "^3.0.5",
     "react": "^18.3.1",
