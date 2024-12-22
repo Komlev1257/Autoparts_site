@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="0; url=/" />
     <script>
-      // Если редирект через meta не сработал, перенаправляем с помощью JavaScript
+      const redirectTo = window.location.pathname;
+      window.history.replaceState(null, null, redirectTo);
       window.location.href = "/";
     </script>
   </head>
