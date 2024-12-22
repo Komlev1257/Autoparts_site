@@ -21,7 +21,6 @@ const Home: React.FC = () => {
   const navigate = useNavigate();
 
   const handleCategoryClick = (category: string) => {
-    // Перенаправляем на страницу каталога с фильтром по категории
     navigate(`/catalog?category=${category}`);
   };
 
@@ -32,7 +31,7 @@ const Home: React.FC = () => {
           <div
             key={category.id}
             className={styles.category}
-            onClick={() => handleCategoryClick(category.name)} // Обработчик клика
+            onClick={() => handleCategoryClick(category.name)}
           >
             <img
               src={category.image}

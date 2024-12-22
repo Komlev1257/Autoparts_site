@@ -14,11 +14,11 @@ html, body {
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Минимальная высота равна 100% экрана */
+  min-height: 100vh;
 }
 
 .app-content {
-  flex: 1; /* Основной контент растягивается, занимая доступное пространство */
+  flex: 1;
 }
 
 footer {

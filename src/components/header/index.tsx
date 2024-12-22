@@ -7,7 +7,6 @@ export const Header: React.FC = () => {
 
   return (
     <div className={styles.header}>
-      {/* Левая часть с кнопками */}
       <div className={styles.header_left}>
         <button
           className={styles.header_button}
@@ -29,7 +28,6 @@ export const Header: React.FC = () => {
         </button>
       </div>
 
-      {/* Правая часть с контактной информацией */}
       <div className={styles.header_right}>
         <span className={styles.header_contact}>📞 +7 (123) 456-78-90</span>
         <span className={styles.header_contact}>📧 info@example.com</span>

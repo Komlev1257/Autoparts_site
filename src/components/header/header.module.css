@@ -8,10 +8,10 @@
   font-size: 1rem;
 }
 
-/* Левая часть: кнопки */
+
 .header_left {
   display: flex;
-  gap: 15px; /* Расстояние между кнопками */
+  gap: 15px; 
 }
 
 .header_button {
@@ -29,10 +29,10 @@
   color: #0056b3;
 }
 
-/* Правая часть: контакты */
+
 .header_right {
   display: flex;
-  flex-direction: raw; /* Ставим контакты друг под другом */
+  flex-direction: raw;
   text-align: right;
   gap: 20px;
 }
@@ -44,10 +44,10 @@
 }
 
 .header_contact:first-child {
-  font-weight: bold; /* Телефон выделяем */
+  font-weight: bold;
 }
 
-/* Адаптивность */
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;

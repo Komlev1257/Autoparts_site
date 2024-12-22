@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../cart/CartContext";
 import styles from "./stickyBar.module.css";
 import logo from "../../assets/logo.png";
-import cart from "../../assets/cart.png";
+import cart_logo from "../../assets/cart.png";
 
 const StickyBar: React.FC = () => {
-  const [query, setQuery] = useState(""); // Храним введенный текст
+  const [query, setQuery] = useState("");
   const navigate = useNavigate();
+  const { cart } = useCart();
 
-  // Функция обработки поиска
+  const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
   const handleSearch = () => {
     if (query.trim()) {
       navigate(`/catalog?search=${encodeURIComponent(query.trim())}`);
     }
   };
 
-  // Обработчик нажатия клавиши Enter
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       handleSearch();
@@ -28,11 +30,7 @@ const StickyBar: React.FC = () => {
         className={styles.sticky_logo_button}
         onClick={() => navigate("/")}
       >
-        <img
-          src={logo}
-          alt="Логотип"
-          className={styles.sticky_logo_image}
-        />
+        <img src={logo} alt="Логотип" className={styles.sticky_logo_image} />
         <span className={styles.sticky_logo_text}>Автомобис Пик</span>
       </button>
 
@@ -43,12 +41,9 @@ const StickyBar: React.FC = () => {
           className={styles.sticky_search_input}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={handleKeyDown}  // Добавляем обработчик для Enter
+          onKeyDown={handleKeyDown}
         />
-        <button
-          className={styles.sticky_search_button}
-          onClick={handleSearch}
-        >
+        <button className={styles.sticky_search_button} onClick={handleSearch}>
           Найти
         </button>
       </div>
@@ -58,10 +53,13 @@ const StickyBar: React.FC = () => {
         onClick={() => navigate("/cart")}
       >
         <img
-          src={cart}
+          src={cart_logo}
           alt="Корзина"
           className={styles.sticky_cart_image}
         />
+        {totalItems > 0 && (
+          <span className={styles.sticky_cart_badge}>{totalItems}</span>
+        )}
       </button>
     </div>
   );

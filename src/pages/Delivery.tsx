@@ -13,7 +13,6 @@ const Delivery: React.FC = () => {
           </p>
           <ul>
             <li>ул. Автозапчастей, 123</li>
-            <li>ул. Машиностроителей, 45</li>
           </ul>
         </section>
 

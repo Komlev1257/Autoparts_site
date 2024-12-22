@@ -6,21 +6,21 @@
 
 .footer__content {
   display: flex;
-  justify-content: space-between; /* Размещение по краям */
+  justify-content: space-between;
   align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap; /* Для адаптивности */
+  flex-wrap: wrap;
 }
 
 .footer__info {
-  width: 30%; /* Занимает 30% пространства */
-  text-align: center; /* Центрируем текст */
-  margin-bottom: 20px; /* Отступ снизу для адаптивности */
+  width: 30%;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .footer__contact, .footer__social {
-  width: 20%; /* Контакты и соцсети занимают 20% */
+  width: 20%;
 }
 
 .footer__info h3, .footer__contact h3, .footer__social h3 {
@@ -52,8 +52,8 @@
 
 @media (max-width: 768px) {
   .footer__info, .footer__contact, .footer__social {
-    width: 100%; /* На мобильных устройствах элементы будут занимать всю ширину */
-    text-align: center; /* Центрируем текст */
-    margin-bottom: 20px; /* Отступы между секциями */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
   }
 }

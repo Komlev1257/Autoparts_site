@@ -4,6 +4,7 @@ import Contacts from './pages/Contacts';
 import Payment from './pages/Payment';
 import Delivery from './pages/Delivery';
 import Catalog from './pages/Catalog';
+import Cart from './pages/Cart';
 import StickyBar from "./components/sticky_bar/stickyBar";
 import { Header } from './components/header/index';
 import { Footer } from './components/footer/index';
@@ -13,13 +14,10 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app-container">
-        {/* Header - общий верхний блок */}
         <Header />
         
-        {/* StickyBar - всегда вверху */}
         <StickyBar />
         
-        {/* Основной контент */}
         <div className="app-content">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -27,10 +25,10 @@ function App() {
             <Route path="/payment" element={<Payment />} />
             <Route path="/delivery" element={<Delivery />} />
             <Route path="/catalog" element={<Catalog />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </div>
         
-        {/* Footer */}
         <Footer />
       </div>
     </BrowserRouter>

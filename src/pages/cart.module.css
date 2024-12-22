@@ -1,0 +1,131 @@
+.cart {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .cart h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cart_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cart_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .cart_item h3 {
+    font-size: 1.2rem;
+    margin: 0 0 5px;
+  }
+  
+  .cart_item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .cart_item button {
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cart_item button:hover {
+    background-color: #d32f2f;
+  }
+  
+  .cart_summary {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: right;
+  }
+  
+  .cart_summary p {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .cart_summary button {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cart_summary button:hover {
+    background-color: #388e3c;
+  }
+
+  .cart_form {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .cart_form h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .cart_form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .cart_form input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .cart_form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .cart_form button {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cart_form button:hover {
+    background-color: #388e3c;
+  }
+  

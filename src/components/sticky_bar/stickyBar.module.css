@@ -1,90 +1,117 @@
 .sticky_bar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px;
-    height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  height: 60px;
+}
+
+
+.sticky_logo_button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sticky_logo_image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.sticky_logo_text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.sticky_search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 20px;
+}
+
+.sticky_search_input {
+  flex: 1;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sticky_search_button {
+  background-color: #1892f5;
+  color: white;
+  border: none;
+  padding: 7px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+
+.sticky_cart_button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.sticky_cart_image {
+  width: 30px;
+  height: 30px;
+}
+
+.sticky_cart_badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff0000;
+  color: white;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .sticky_bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 10px;
   }
-  
-  /* Логотип */
+
   .sticky_logo_button {
-    display: flex;
-    align-items: center;
-    background: none;
-    border: none;
-    cursor: pointer;
+    flex: none;
+    margin-bottom: 10px;
   }
-  
-  .sticky_logo_image {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-  
-  .sticky_logo_text {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  /* Блок поиска */
+
   .sticky_search {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    max-width: 600px;
-    margin: 0 20px;
+    width: 100%;
+    margin: 10px 0;
   }
-  
-  .sticky_search_input {
-    flex: 1;
-    padding: 7px 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .sticky_search_button {
-    background-color: #1892f5;
-    color: white;
-    border: none;
-    padding: 7px 25px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 10px;
-  }
-  
-  /* Корзина */
+
   .sticky_cart_button {
-    background: none;
-    border: none;
-    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%); 
   }
-  
-  .sticky_cart_image {
-    width: 30px;
-    height: 30px;
-  }
-  
-  /* Адаптивность */
-  @media (max-width: 768px) {
-    .sticky_bar {
-      padding: 10px 10px;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .sticky_search {
-      width: 100%;
-      margin-top: 10px;
-    }
-  
-    .sticky_logo_button {
-      margin-bottom: 10px;
-    }
-  }
-  
+}
