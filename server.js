@@ -8,11 +8,11 @@ const port = 5000;
 
 // Настройка подключения к базе данных
 const pool = new Pool({
-  user: 'artem',
-  host: 'm.barsux.moscow',
-  database: 'artem',
-  password: 'artemindus2003',
-  port: 5433,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_DATABASE,
+  password: process.env.DB_PASSWORD,
+  port: parseInt(process.env.DB_PORT || '5432', 10),
 });
 // Middleware
 app.use(cors());
