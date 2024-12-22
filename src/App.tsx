@@ -12,7 +12,7 @@ import './global.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <div className="app-container">
         <Header />
         
