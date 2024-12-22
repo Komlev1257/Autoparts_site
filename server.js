@@ -2,20 +2,17 @@ import express from 'express';
 import pkg from 'pg';
 const { Pool } = pkg;
 import cors from 'cors';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 const app = express();
 const port = 5000;
 
 // Настройка подключения к базе данных
 const pool = new Pool({
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  database: process.env.DB_DATABASE,
-  password: process.env.DB_PASSWORD,
-  port: parseInt(process.env.DB_PORT || '5432', 10),
+  user: 'artem',
+  host: 'm.barsux.moscow',
+  database: 'artem',
+  password: 'artemindus2003',
+  port: 5433,
 });
 // Middleware
 app.use(cors());
@@ -31,12 +28,12 @@ app.get('/api/products', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
-
 // Маршрут для добавления заказа
 app.post('/api/orders', async (req, res) => {
   try {
     const { cart, deliveryMethod, paymentMethod, deliveryAddress } = req.body;
 
+    // Пример запроса к таблице `orders`
     const result = await pool.query(
       `INSERT INTO orders.orders (cart, delivery_method, payment_method, delivery_address) 
        VALUES ($1, $2, $3, $4) RETURNING id`,
